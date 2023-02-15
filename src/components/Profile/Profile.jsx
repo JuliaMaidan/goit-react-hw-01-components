@@ -36,5 +36,9 @@ Profile.propTypes = {
     tag: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
     avatar: PropTypes.string.isRequired,
-    stats: PropTypes.objectOf(PropTypes.number).isRequired,
+    data: PropTypes.arrayOf(PropTypes.shape({
+        likes: PropTypes.number.isRequired,
+        views: PropTypes.number.isRequired,
+        followers: PropTypes.number.isRequired,
+    }))
 }
